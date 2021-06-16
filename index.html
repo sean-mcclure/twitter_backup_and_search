@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <script src='https://azlejs.com/v2/azle.min.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+</head>
+    
+<body></body>
+
+</html>
+    
+<script> 
+ 
+create_azle(function() {
+
+    az.style_body({
+        "background" : "#227093",
+        "font-family" : "Oswald",
+        "color" : "#f7f1e3"
+    })
+
+    az.add_sections({
+        "this_class" : "main_section",
+        "sections" : 1
+    })
+    
+    az.style_sections("main_section", 1, {
+        "background" : "#40407a",
+        "border-radius" : "10px"
+    })
+
+    az.add_text("main_section", 1, {
+        "this_class" : "main_title",
+        "text" : "TWITTER ARCHIVER"
+    })
+
+    az.style_text("main_title", 1, {
+        "align" : "center",
+        "font-size" : "22px"
+    })
+
+    az.add_text("main_section", 1, {
+        "this_class" : "main_title_sub",
+        "text" : "Download Your Twitter Archive"
+    })
+
+    az.style_text("main_title_sub", 1, {
+        "align" : "center",
+        "font-size" : "18px",
+        "cursor" : "pointer"
+    })
+
+    az.add_event("main_title_sub", 1, {
+        "type" : "click",
+        "function" : function() {
+            az.navigate_to("https://twitter.com/settings/account", "new_tab")
+        }
+    })
+
+})   
+
+</script>
